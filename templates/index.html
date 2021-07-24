@@ -29,7 +29,7 @@
     </div>
     <div class="card-footer">
       <small class="text-muted">
-        <button type="button" class="btn btn-info">Historia</button>
+        <button onclick="location.href='{{ url_for('history') }}'" type="button" class="btn btn-info">Historia</button>
       </small>
     </div>
   </div>
@@ -41,7 +41,7 @@
     </div>
     <div class="card-footer">
       <small class="text-muted">
-        <button type="button" class="btn btn-success">Dni</button>
+        <button onclick="location.href='{{ url_for('all_days') }}'" type="button" class="btn btn-success">Dni</button>
       </small>
     </div>
   </div>
@@ -53,7 +53,7 @@
     </div>
     <div class="card-footer">
       <small class="text-muted">
-        <button type="button" class="btn btn-danger">Materiały</button>
+        <button onclick="location.href='{{ url_for('materials') }}'" type="button" class="btn btn-danger" onclick="">Materiały</button>
       </small>
     </div>
   </div>
