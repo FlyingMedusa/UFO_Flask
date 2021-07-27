@@ -1,15 +1,20 @@
-body{
+html, body{
     background-image: linear-gradient(to bottom right, rgb(121, 148, 223), #e6f7ff);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;
+    height: 100%;
     /*
     background-image: url("../images/ufo_baza.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;*/
+}
+
+input {
+    width: 80%;
 }
 
 .jumbotron{
@@ -41,4 +46,47 @@ body{
 .general_content{
     text-align: center;
     color: rgb(12, 31, 85);
+}
+
+#dimmed {
+    color: rgb(40, 68, 146);
+    text-align: center;
+}
+
+#doorPlum {
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 5%;
+    height: 0;
+    padding-bottom: 34%;
+    width: 25%;
+    background-color: plum;
+    border-style: dotted;
+    border-width: thick;
+    display: inline-block;
+}
+
+
+#doorCyan {
+    text-align: center;
+    margin-left: 8%;
+    height: 0;
+    padding-bottom: 34%;
+    width: 25%;
+    background-color: darkcyan;
+    border-style: dotted;
+    border-width: thick;
+    display: inline-block;
+}
+
+#doorOrchid {
+    text-align: center;
+    margin-left: 8%;
+    height: 0;
+    padding-bottom: 34%;
+    width: 25%;
+    background-color: darkorchid;
+    border-style: dotted;
+    border-width: thick;
+    display: inline-block;
 }
