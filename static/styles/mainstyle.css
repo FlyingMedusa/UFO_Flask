@@ -48,45 +48,57 @@ input {
     color: rgb(12, 31, 85);
 }
 
+.innertext{
+    color: white;
+    text-shadow: 2px 2px #453a58;
+    background-color:rgba(0,0,0,0.4);
+}
+
 #dimmed {
-    color: rgb(40, 68, 146);
+    color: rgb(93, 116, 180);
     text-align: center;
 }
 
 #doorPlum {
     text-align: center;
+    font-weight: bold;
     margin-top: 25px;
     margin-left: 5%;
     height: 0;
-    padding-bottom: 34%;
+    padding-bottom: 33%;
     width: 25%;
     background-color: plum;
-    border-style: dotted;
+    border-style: double;
     border-width: thick;
+    border-color: lightpink;
     display: inline-block;
 }
 
 
 #doorCyan {
     text-align: center;
+    font-weight: bold;
     margin-left: 8%;
     height: 0;
-    padding-bottom: 34%;
+    padding-bottom: 33%;
     width: 25%;
     background-color: darkcyan;
-    border-style: dotted;
+    border-style: double;
     border-width: thick;
+    border-color: cyan;
     display: inline-block;
 }
 
 #doorOrchid {
     text-align: center;
+    font-weight: bold;
     margin-left: 8%;
     height: 0;
-    padding-bottom: 34%;
+    padding-bottom: 33%;
     width: 25%;
     background-color: darkorchid;
-    border-style: dotted;
+    border-style: double;
     border-width: thick;
+    border-color: violet;
     display: inline-block;
 }
