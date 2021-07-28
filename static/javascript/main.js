@@ -3,6 +3,7 @@ var correctPass2 = 'print("otwieraj")'
 
 function returnInfo() {
     var enteredPass = document.getElementById('klucz1').value;
+    var badPass = document.getElementById('klucz2').value;
     
     if (enteredPass == correctPass1 || enteredPass == correctPass2) {
         alert('Brawo! Otwarte!');
