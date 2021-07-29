@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, request
 
 app = Flask(__name__)
 
@@ -10,9 +10,17 @@ def home():
 def history():
     return render_template("historia.html")
 
-@app.route("/dzien1")
+@app.route("/dzien1", methods=["POST", "GET"])
 def day1():
-    return render_template("dzien1.html")
+    if request.method == "POST":
+        the_key = request.form["klucz1"]
+        return redirect(url_for("stage2"))
+    else:
+        return render_template("dzien1.html")
+
+@app.route("/dzien1/korytarz")
+def stage2():
+    return "działa"
 
 @app.route("/dzien2")
 def day2():
