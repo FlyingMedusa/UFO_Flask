@@ -11,3 +11,18 @@ function returnInfo() {
         alert('Odmowa wstępu.');
     }
 }
+
+function postPassword() {
+    let password = document.getElementById('kluczyk').value;
+    console.log(password)
+    if (password) {
+        fetch('/dzien1', {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({a: 7, str: 'Some string: &=&', pass: password}) 
+        })
+    }
+}

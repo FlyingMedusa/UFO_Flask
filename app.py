@@ -13,8 +13,13 @@ def history():
 @app.route("/dzien1", methods=["POST", "GET"])
 def day1():
     if request.method == "POST":
-        the_key = request.form["kluczyk"]
-        return redirect(url_for("stage2"))
+        the_key = request.json
+        print(request.json)
+        print(request.data)
+        if the_key == "abc":
+            return redirect(url_for("stage2"))
+        else:
+            return render_template("dzien1.html")
     else:
         return render_template("dzien1.html")
 
