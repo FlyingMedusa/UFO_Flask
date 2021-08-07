@@ -13,6 +13,7 @@ def history():
 @app.route("/dzien1", methods=["POST", "GET"])
 def day1():
     if request.method == "POST":
+        first_key = request.form["kluczyk"]
         the_key = request.json
         print(request.json)
         print(request.data)
