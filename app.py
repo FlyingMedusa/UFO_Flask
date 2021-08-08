@@ -17,14 +17,16 @@ def day1():
         # body = request.json
         # pass_key = body['pass']
         # print('json',request.json)
-        print('form', request.form)
-        pass_key = request.form['kluczyk']
-        print(pass_key)
-        if pass_key == DOOR_3_PASSWORD:
-            print('jestem')
-            return redirect(url_for("stage2"), 302)
-        else:
-            return render_template("dzien1.html")
+        print('form',request.form)
+        if 'klucz' in request.form:
+            return "ODMOWA WSTĘPU"
+        if 'kluczyk' in request.form:
+            pass_key_correct_door = request.form['kluczyk']
+            
+            if pass_key_correct_door == DOOR_3_PASSWORD:
+                return redirect(url_for("stage2"), 302)
+            else:
+                return "ODMOWA WSTĘPU"
     else:
         return render_template("dzien1.html")
 

@@ -6,26 +6,26 @@
 <h1 id="dimmed">Etap 1: Włazy</h1>
 <br>
 
-<div id="doorPlum" onmousedown="changeBoxPlum()">
+<div id="doorPlum">
     <h4 class="innertext">Właz 1</h4>
     <br>
-    <form>
+    <form action="/dzien1" method="POST">
         <p>Klucz:</p>
-        <input id="klucz2" type="text" style="text-align:center;">
+        <input id="klucz" name="klucz" type="text" style="text-align:center;">
+        <br><br>
+        <button type="submit" class="btn btn-light">Check!</button>
     </form>
-    <br>
-    <button type="button" onclick="returnInfo()" class="btn btn-light">Check!</button>
 </div>
 
-<div id="doorCyan" onmousedown="changeBoxCyan()">
+<div id="doorCyan">
     <h4 class="innertext">Właz 2</h4>
     <br>
-    <form>
+    <form action="/dzien1" method="POST">
         <p>Klucz:</p>
-        <input id="klucz1" type="text" style="text-align:center;">
+        <input id="klucz" name="klucz" type="text" style="text-align:center;">
+        <br><br>
+        <button type="submit" class="btn btn-light">Check!</button>
     </form>
-    <br>
-    <button type="button" onclick="returnInfo()" class="btn btn-light">Check!</button>
 </div>
 
 <div id="doorOrchid">
@@ -33,10 +33,10 @@
     <br>
     <form action="/dzien1" method="POST">
         <p>Klucz:</p>
-        <input id="kluczyk" name="kluczyk" type="text" style="text-align:center;"> <br> <br>
+        <input id="kluczyk" name="kluczyk" type="text" style="text-align:center;"> 
+        <br> <br>
         <button type="submit" class="btn btn-light">Check!</button>
-    </form>
-    
+    </form>   
 </div>
 
 
