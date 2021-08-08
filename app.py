@@ -12,13 +12,17 @@ def history():
 
 @app.route("/dzien1", methods=["POST", "GET"])
 def day1():
+    DOOR_3_PASSWORD = 'abc'
     if request.method == "POST":
-        first_key = request.form["kluczyk"]
-        the_key = request.json
-        print(request.json)
-        print(request.data)
-        if the_key == "abc":
-            return redirect(url_for("stage2"))
+        # body = request.json
+        # pass_key = body['pass']
+        # print('json',request.json)
+        print('form', request.form)
+        pass_key = request.form['kluczyk']
+        print(pass_key)
+        if pass_key == DOOR_3_PASSWORD:
+            print('jestem')
+            return redirect(url_for("stage2"), 302)
         else:
             return render_template("dzien1.html")
     else:
@@ -26,7 +30,7 @@ def day1():
 
 @app.route("/dzien1/korytarz")
 def stage2():
-    return "działa"
+    return "działa!"
 
 @app.route("/dzien2")
 def day2():
