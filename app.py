@@ -1,6 +1,8 @@
-from flask import Flask, redirect, url_for, render_template, request
+from flask import Flask, redirect, url_for, render_template, request, flash
 
 app = Flask(__name__)
+
+app.config['SECRET_KEY'] = ''
 
 @app.route("/")
 def home():
@@ -19,20 +21,22 @@ def day1():
         # print('json',request.json)
         print('form',request.form)
         if 'klucz' in request.form:
-            return "ODMOWA WSTĘPU"
+            flash("⚠️ ODMOWA WSTĘPU ⚠️", "info")
+            return render_template("dzien1.html")
         if 'kluczyk' in request.form:
             pass_key_correct_door = request.form['kluczyk']
             
             if pass_key_correct_door == DOOR_3_PASSWORD:
                 return redirect(url_for("stage2"), 302)
             else:
-                return "ODMOWA WSTĘPU"
+                flash("⚠️ ODMOWA WSTĘPU ⚠️", "info")
+                return render_template("dzien1.html")
     else:
         return render_template("dzien1.html")
 
 @app.route("/dzien1/korytarz")
 def stage2():
-    return "działa!"
+    return render_template("korytarz.html")
 
 @app.route("/dzien2")
 def day2():

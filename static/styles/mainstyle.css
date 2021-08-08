@@ -59,6 +59,11 @@ input {
     text-align: center;
 }
 
+#flash_messages {
+    text-align: center;
+    color: darkslateblue;
+}
+
 #doorPlum {
     text-align: center;
     font-weight: bold;
