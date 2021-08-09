@@ -107,3 +107,7 @@ input {
     border-color: violet;
     display: inline-block;
 }
+
+#omniscent {
+    background-color: cornflowerblue;
+}
